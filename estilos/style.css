@@ -1,0 +1,165 @@
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #f6f6f6;
+    --cor-tercearia: #9600d1;
+    --cor-hover: #272727;
+    --fonte-principal: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+* {
+    /* O * informa que toda a página será estilizada dessa forma*/
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*utiliza todo o tamanho da altura página (testar com
+       inspector object*/
+    box-sizing: border-box;
+    /*com essa configuração todos os elementos filhos
+       (tags) estarão contidos no Pai*/
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    padding: 0% 0%;
+
+}
+
+.titulo-destaque {
+    color: var(--cor-tercearia);
+}
+
+.apresentacao {
+    display: flex;
+    /*todos os elementos ficam em linha por padrão, mas
+   pode ser configurável*/
+    align-items: center;
+    /*alinha todos os elementos com base na imagem*/
+    justify-content: space-between;
+    /*espaço entre os objetos*/
+    padding: 5% 15%;
+    gap: 82px
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25 rem;
+    /*Olhar no projeto do Figma*/
+    font-family: var(--fonte-principal);
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 24px;
+    /*Olhar no projeto do Figma*/
+}
+
+.apresentacao__links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px
+}
+
+.apresentacao__links__apresentacao {
+    width: 378px;
+    text-align: center;
+    border-radius: 8px;
+    /*borda
+   arredondada*/
+    font-size: 24px;
+    font-weight: 600;
+    padding: 21.5px 0;
+    /*primeiro valor vertical
+e segundo valor horizontal*/
+    color: var(--cor-tercearia);
+    /*cor do texto*/
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    border: 2px solid var(--cor-tercearia);
+    gap: 16px;
+    justify-content: center;
+    display: flex;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    /*Olhar no projeto do
+Figma*/
+    display: flex;
+    flex-direction: column;
+    /*posicionando
+elementos na vertical*/
+    gap: 40px;
+    /*verificar no Figma*/
+    /* o
+gap é o espaçamento entre elementos*/
+}
+
+.apresentacao__links__subtitulo {
+    font-family: 'Krona One', sans-serif;
+    font-weight: 400;
+    size: 24px;
+}
+
+.apresentacao__links__link:hover {
+    background-color: var(--cor-hover);
+}
+
+.rodape {
+    color: var(--cor-primaria);
+    background-color: var(--cor-tercearia);
+    padding: 23px;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.cabecalho__menu__link {
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--cor-tercearia);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cabecalho {
+    padding: 2% 0% 15%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.apresentacao__imagem {
+    width: 50%
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        /*A imagem ficará em cima como no
+       FIGMA,
+        se colocar apenas column, a imagem ficará em baixo (faça o
+       teste)*/
+        padding: 5%;
+        /*Melhorando o espaçamento para dispositivos menores*/
+
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+        /*ocupando a parte da Tag pai que pode preencher ou
+       pode usar 100%*/
+    }
+}
